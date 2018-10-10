@@ -35,7 +35,8 @@ def mergeTwoLists(l1, l2):
 		new_list = ListNode(l2.val)
 		l2 = l2.next
 
-	#Crawler and new_list have the same address in memory.
+	#Crawler and new_list have the same address in memory when initialized. Changing the "next" value
+	#of crawler also changes the "next" value of new_list. Don't forget next for later.
 	crawler = new_list
 
 	while l1 != None and l2 != None:

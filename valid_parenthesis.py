@@ -38,6 +38,8 @@ is done inside lists
 '''
 
 def isValid(s):
+	if s == "":
+		return print("String empty")
 	stack = []
 	for x in range(len(s)):
 		if (not stack) and (s[x] == ")" or s[x] == "}" or s[x] == "]"):
@@ -60,7 +62,7 @@ def isValid(s):
 
 #Main body
 if __name__ == '__main__':
-	parenthesis = ["()", "({[]})","[", "(", "{", "[[[{{{((()))}}}]]]", "[["]
+	parenthesis = ["()", "({[]})","[", "(", "{", "[[[{{{((()))}}}]]]", "[[",""]
 	for x in range(len(parenthesis)):
 		isValid(parenthesis[x])
 

@@ -17,9 +17,20 @@ minStack.getMin();   --> Returns -3.
 minStack.pop();
 minStack.top();      --> Returns 0.
 minStack.getMin();   --> Returns -2.
-'''
 
 #========================================#
+
+The key to keeping track of the minimum is storing the minimum along with each value pushed
+onto the stack. Each node will store the minimum value that was the minimum at the time it
+was pushed onto the stack.
+
+When checking if the newest number to be pushed to the stack should be the new minimum, 
+the program will compare what the minimum of the current node on the top of the stack is.
+
+
+'''
+#========================================#
+
 
 class node:
     def __init__(self, v, m):
